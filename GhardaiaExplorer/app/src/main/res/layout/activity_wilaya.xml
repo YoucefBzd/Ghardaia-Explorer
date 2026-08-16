@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clWilaya"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:animateLayoutChanges="true"
+    tools:context=".activities.WilayaActivity">
+
+    <ImageView
+        android:id="@+id/ivWilayaBanner"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/your_wilaya_banner"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvWilayaTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Discover Ghardaïa"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/textColorPrimary"
+        android:gravity="center"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/ivWilayaBanner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvWilayaDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="🌍 Welcome to Ghardaïa – A Hidden Gem of the Algerian Sahara
+Nestled in the heart of the desert, Ghardaïa is more than just an oasis — it's a remarkable destination, rich in culture, heritage, and breathtaking landscapes. Listed as a UNESCO World Heritage Site, the M’Zab Valley perfectly embodies the balance between ancient traditions and ingenious architecture.
+Discover its historic towns such as Beni Isguen, El Atteuf, Melika, Bou Noura, and of course Ghardaïa, where every alley tells a story. Enjoy its vibrant markets, taste a unique gastronomy, and admire the renowned local craftsmanship.
+📸 Whether you're a photography lover, a culture enthusiast, or simply seeking a desert escape, Ghardaïa promises an unforgettable experience under the Sahara sun."
+        android:textSize="16sp"
+        android:textColor="@color/textColorSecondary"
+        android:padding="16dp"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:onClick="expandDescription"
+        app:layout_constraintTop_toBottomOf="@id/tvWilayaTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ViewFlipper
+        android:id="@+id/vfGallery"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tvWilayaDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:autoStart="true"
+        android:flipInterval="3000">
+
+        <ImageView
+            android:id="@+id/ivGallery1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gallery_image1"
+            android:onClick="enlargeImage" />
+
+        <ImageView
+            android:id="@+id/ivGallery2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gallery_image2"
+        android:onClick="enlargeImage" />
+
+        <ImageView
+            android:id="@+id/ivGallery3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gallery_image3"
+        android:onClick="enlargeImage" />
+
+        <ImageView
+            android:id="@+id/ivGallery4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gallery_image4"
+        android:onClick="enlargeImage" />
+
+        <ImageView
+            android:id="@+id/ivGallery5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gallery_image5"
+        android:onClick="enlargeImage" />
+
+        <ImageView
+            android:id="@+id/ivGallery6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gallery_image6"
+        android:onClick="enlargeImage" />
+
+        <ImageView
+            android:id="@+id/ivGallery7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gallery_image7"
+        android:onClick="enlargeImage" />
+    </ViewFlipper>
+
+    <Button
+        android:id="@+id/btnViewCategories"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="View Categories"
+        android:backgroundTint="@color/primaryColor"
+        android:textColor="@android:color/white"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
