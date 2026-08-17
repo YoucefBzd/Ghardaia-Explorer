@@ -31,7 +31,7 @@ To build and run this project locally, ensure your environment meets the followi
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/[Your-GitHub-Username]/Ghardaia-Explorer.git
+   git clone https://github.com/YoucefBZD/Ghardaia-Explorer.git
    ```
 
 2. **Open in Android Studio**
